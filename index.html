@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Porfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#" class="logo">My<span>Porfolio</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#semester">Outputs</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="grid-lines"></div>
+  <div class="hero-content">
+    <span class="hero-tag">&#128075; Hello, World!</span>
+    <h1>
+      Information System
+      <span class="line2">Student</span>
+    </h1>
+    <p>Building digital experiences through code and creativity. Currently studying and growing through real-world projects every semester.</p>
+    <div class="hero-btns">
+      <a href="#semester" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="photo-frame">
+      <div class="photo-placeholder">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="35" r="22"/>
+          <ellipse cx="50" cy="80" rx="35" ry="22"/>
+        </svg>
+        <img src="nash.jpg" alt="My Photo" />
+      </div>
+      <div class="photo-ring"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">Who I Am</div>
+  <div class="section-title">About <span>Me</span></div>
+  <div class="section-line"></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a passionate Information System student driven by curiosity and a love for problem-solving. From writing my first "Hello World" to building design applications, every line of code is a step forward.</p>
+      <p>My journey so far spans two semesters packed with hands-on projects, collaborative work, and continuous learning in web development, programming fundamentals, and database management.</p>
+      <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source, and leveling up my skills through online courses and personal projects.</p>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Semesters Completed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Technologies Learned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Dedication</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-skills">
+      <h3>Technical Proficiency</h3>
+      <div class="skill-item">
+        <div class="skill-meta">
+          <span class="skill-name">HTML &amp; CSS</span>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-meta">
+          <span class="skill-name">JavaScript</span>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-meta">
+          <span class="skill-name">Python</span>
+          <span class="skill-pct">75%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-meta">
+          <span class="skill-name">MySQL / Database</span>
+          <span class="skill-pct">65%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-meta">
+          <span class="skill-name">Java / OOP</span>
+          <span class="skill-pct">60%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEMESTER OUTPUTS -->
+<section id="semester">
+  <div class="section-label">Academic Work</div>
+  <div class="section-title">Semester <span>Outputs</span></div>
+  <div class="section-line"></div>
+
+  <div class="sem-tabs">
+    <button class="sem-tab active" onclick="switchSem(1)">1st Semester</button>
+    <button class="sem-tab" onclick="switchSem(2)">2nd Semester</button>
+  </div>
+
+  <!-- 1ST SEMESTER -->
+<!-- 1ST SEMESTER -->
+<div class="sem-panel active" id="sem1">
+  <div class="sem-header">
+    <div class="sem-badge">SEM 01</div>
+    <div class="sem-desc">IS112 - Programming 1: Foundations of programming, system design, and creative digital outputs.</div>
+  </div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="hotel.jpg" alt="">
+      <!--  <div class="project-tag">Java</div> -->
+      </div>
+      <div class="project-body">
+        <h4>Hotel Management System</h4>
+        <p>A console-based hotel system with Admin, Create Account, Check-In, and Check-Out features built in Java.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Java</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="documentaion.jpg" alt="">
+       <!-- <div class="project-tag">Documentation</div> -->
+      </div>
+      <div class="project-body">
+        <h4>System Proposal – IS112</h4>
+        <p>A Group Picture of system proposal programming 1 in Davao del Norte State College.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Group Picture</span>
+          <span class="tech-pill">Group Project</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+       <img src="birthday.jpg" alt="">
+        <!--<div class="project-tag">Graphic Design</div>-->
+      </div>
+      <div class="project-body">
+        <h4>Birthday Greeting Design</h4>
+        <p>A digital birthday greeting card created for a classmate, featuring photo editing and typography design.</p>
+        <div class="project-tech">
+          <span class="tech-pill">PhotoShop Editing</span>
+          <span class="tech-pill">Photo Editing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="robot.jpg" alt="">
+        <!--<div class="project-tag">Illustration</div>--->
+      </div>
+      <div class="project-body">
+        <h4>Robot Character Design</h4>
+        <p>A vector-style robot illustration created as a group output with Tero, Leejeongshin and Bagajo, Wenmar Nash.</p>
+        <div class="project-tech">
+          <span class="tech-pill">PhotoShop Editing</span>
+          <span class="tech-pill">Group Output</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- 2ND SEMESTER -->
+  <div class="sem-panel" id="sem2">
+    <div class="sem-header">
+      <div class="sem-badge">SEM 02</div>
+      <div class="sem-desc">Advanced web development, object-oriented programming, and database integration.</div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-thumb">
+          <img src="payroll.jpg" alt="">
+          <!--<div class="project-tag">Java</div>-->
+        </div>
+        <div class="project-body">
+          <h4>Payroll Management System</h4>
+          <p>A Java desktop application built in NetBeans IDE featuring employee records, Add Employee forms, login authentication, and payroll processing.</p>
+          <div class="project-tech">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb">
+          <img src="documentation1.jpg" alt="">
+          <!--<div class="project-tag">Java</div>-->
+        </div>
+        <div class="project-body">
+          <h4>System Presentation</h4>
+          <p>A formal group presentation of the Payroll Management System submitted as a finals output, showcasing system features and design.</p>
+          <div class="project-tech">
+            <span class="tech-pill">System Presentation</span>
+           <span class="tech-pill">Group Output</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb">
+          <img src="Planora1.jpg" alt="">
+         <!-- <div class="project-tag">Application Design</div> -->
+        </div>
+        <div class="project-body">
+          <h4>Planora – Party Hub App</h4>
+          <p>A mobile app MVP featuring an AI landing page, map page for nearby organizers, messaging, and a schedule page for event planning.</p>
+          <div class="project-tech">
+            <span class="tech-pill">Figma</span>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb">
+          <img src="Studynest.jpg" alt="">
+        <!--  <div class="project-tag">Application Design</div> -->
+        </div>
+        <div class="project-body">
+          <h4>StudyNest – Learning App</h4>
+          <p>A mobile learning app designed for Grade 4 and K–6 students with a landing page, login, grade selection, and a dashboard for tasks and learning materials.</p>
+          <div class="project-tech">
+            <span class="tech-pill">Flutter</span>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+      <div class="project-thumb">
+        <img src="Presentation1.jpg" alt="">
+        <!--<div class="project-tag">Illustration</div>--->
+      </div>
+      <div class="project-body">
+        <h4>Outline Defense</h4>
+        <p>A Outline Defense of the Studynest App submitted as a finals output, document presentation, and demo system process </p>
+        <div class="project-tech">
+          <span class="tech-pill">System Presentation</span>
+          <span class="tech-pill">Group Output</span>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">What I Know</div>
+  <div class="section-title">Tech <span>Skills</span></div>
+  <div class="section-line"></div>
+  <div class="skills-grid">
+    <div class="skill-box"><span class="skill-emoji">&#128431;</span><p>HTML</p></div>
+    <div class="skill-box"><span class="skill-emoji">&#127912;</span><p>CSS</p></div>
+    <div class="skill-box"><span class="skill-emoji">&#128161;</span><p>JavaScript</p></div>
+    <div class="skill-box"><span class="skill-emoji">&#128013;</span><p>Python</p></div>
+    <div class="skill-box"><span class="skill-emoji">&#128187;</span><p>VS Code</p></div>
+    <div class="skill-box"><span class="skill-emoji">&#128241;</span><p>Flutter</p></div>
+    <div class="skill-box"><span class="skill-emoji">&#128279;</span><p>GitHub</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-label">Let's Talk</div>
+  <div class="section-title">Get In <span>Touch</span></div>
+  <div class="section-line"></div>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <p>I'm always open to collaborating on projects, discussing new ideas, or just having a tech conversation. Feel free to reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:yourname@email.com" class="contact-link">
+          <div class="icon">&#128140;</div>
+          nashbagajo143@gmal.com
+        </a>
+        <a href="#" class="contact-link">
+          <div class="icon">&#128241;</div>
+          +63 985 292 0069
+        </a>
+        <a href="#" class="contact-link">
+          <div class="icon">&#128279;</div>
+          github.com/bagajowenmarnash-source
+        </a>
+        <a href="#" class="contact-link">
+          <div class="icon">&#128100;</div>
+          facebook.com/nash.bagajo.2024
+        </a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Juan dela Cruz" />
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="juan@email.com" />
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Hello! I'd love to connect..."></textarea>
+      </div>
+      <button class="btn-primary" style="align-self:flex-start">Send Message &#8594;</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">MyPortfolio</a>
+  <p>&#169; 2026 · Built with &#10084; and lots of coffee · All rights reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
