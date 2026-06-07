@@ -30,3 +30,53 @@ const hamburger = document.getElementById('hamburger');
   document.querySelectorAll('.project-card, .skill-box, .stat-card').forEach((el, i) => {
     el.style.transitionDelay = `${i * 0.05}s`;
   });
+
+  // Starfield background animation
+(function () {
+  const canvas = document.createElement('canvas');
+  canvas.id = 'starfield';
+  document.body.prepend(canvas);
+  const ctx = canvas.getContext('2d');
+  let W, H, stars = [];
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function makeStar() {
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.2 + 0.2,
+      a: Math.random(),
+      da: (Math.random() * 0.004 + 0.001) * (Math.random() < 0.5 ? 1 : -1),
+      speed: Math.random() * 0.15 + 0.02,
+    };
+  }
+
+  function init() {
+    resize();
+    stars = Array.from({ length: 120 }, makeStar);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for (const s of stars) {
+      s.a += s.da;
+      if (s.a <= 0) s.da = Math.abs(s.da);
+      if (s.a >= 1) s.da = -Math.abs(s.da);
+      s.y -= s.speed;
+      if (s.y < -2) { s.y = H + 2; s.x = Math.random() * W; }
+      ctx.beginPath();
+      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(74,222,128,${s.a.toFixed(2)})`;
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+
+  init();
+  draw();
+  window.addEventListener('resize', resize);
+})();
